@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		7EBD425828A667570087ADF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBD425728A667570087ADF6 /* AppDelegate.swift */; };
 		7EBD425A28A667570087ADF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBD425928A667570087ADF6 /* SceneDelegate.swift */; };
-		7EBD425C28A667570087ADF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBD425B28A667570087ADF6 /* ViewController.swift */; };
+		7EBD425C28A667570087ADF6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBD425B28A667570087ADF6 /* LoginViewController.swift */; };
 		7EBD425F28A667570087ADF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EBD425D28A667570087ADF6 /* Main.storyboard */; };
 		7EBD426128A667590087ADF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EBD426028A667590087ADF6 /* Assets.xcassets */; };
 		7EBD426428A667590087ADF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EBD426228A667590087ADF6 /* LaunchScreen.storyboard */; };
+		7EBD426C28A670B50087ADF6 /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBD426B28A670B50087ADF6 /* GreetingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7EBD425428A667570087ADF6 /* HomeWorkFour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWorkFour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EBD425728A667570087ADF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EBD425928A667570087ADF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7EBD425B28A667570087ADF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7EBD425B28A667570087ADF6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7EBD425E28A667570087ADF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7EBD426028A667590087ADF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EBD426328A667590087ADF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EBD426528A667590087ADF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EBD426B28A670B50087ADF6 /* GreetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				7EBD425728A667570087ADF6 /* AppDelegate.swift */,
 				7EBD425928A667570087ADF6 /* SceneDelegate.swift */,
-				7EBD425B28A667570087ADF6 /* ViewController.swift */,
+				7EBD425B28A667570087ADF6 /* LoginViewController.swift */,
+				7EBD426B28A670B50087ADF6 /* GreetingViewController.swift */,
 				7EBD425D28A667570087ADF6 /* Main.storyboard */,
 				7EBD426028A667590087ADF6 /* Assets.xcassets */,
 				7EBD426228A667590087ADF6 /* LaunchScreen.storyboard */,
@@ -138,9 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EBD425C28A667570087ADF6 /* ViewController.swift in Sources */,
+				7EBD425C28A667570087ADF6 /* LoginViewController.swift in Sources */,
 				7EBD425828A667570087ADF6 /* AppDelegate.swift in Sources */,
 				7EBD425A28A667570087ADF6 /* SceneDelegate.swift in Sources */,
+				7EBD426C28A670B50087ADF6 /* GreetingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +307,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -330,7 +334,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
