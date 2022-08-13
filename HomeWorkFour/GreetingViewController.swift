@@ -25,9 +25,9 @@ class GreetingViewController: UIViewController {
                                green: 10 / 255,
                                blue: 200 / 255,
                                alpha: 1.0).cgColor
-        let colorTwo = UIColor(red: 115 / 255,
-                               green: 56 / 255,
-                               blue: 74 / 255,
+        let colorTwo = UIColor(red: 10 / 255,
+                               green: 127 / 255,
+                               blue: 96 / 255,
                                alpha: 1.0).cgColor
         
         let gradient = CAGradientLayer()

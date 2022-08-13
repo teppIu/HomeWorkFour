@@ -17,9 +17,9 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let colorOne = UIColor(red: 115 / 255,
-                               green: 56 / 255,
-                               blue: 74 / 255,
+        let colorOne = UIColor(red: 10 / 255,
+                               green: 127 / 255,
+                               blue: 96 / 255,
                                alpha: 1.0).cgColor
         let colorTwo = UIColor(red: 24 / 255,
                                green: 10 / 255,
@@ -70,22 +70,13 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController {
     private func showAlert(with title: String, and massage: String) {
-        let alertOne = UIAlertController(title: title, message: massage, preferredStyle: .alert)
+        let alert = UIAlertController(title: title, message: massage, preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             self.passwordTF.text = ""
         }
         
-        alertOne.addAction(okAction)
-        present(alertOne, animated: true)
-    }
-    
-    private func showAlertData(with title: String, and massage: String) {
-        let alertLogin = UIAlertController(title: title, message: massage, preferredStyle: .alert)
-        
-        let okAction = UIAlertAction(title: "OK", style: .default)
-        
-        alertLogin.addAction(okAction)
-        present(alertLogin, animated: true)
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
 }
