@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E07002E28AD5B960094D992 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E07002D28AD5B960094D992 /* InfoViewController.swift */; };
+		7E40840528ABD4F9000F5E6F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E40840428ABD4F9000F5E6F /* User.swift */; };
+		7E6657F228AC2758002C266A /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6657F128AC2758002C266A /* UserViewController.swift */; };
 		7EBD425828A667570087ADF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBD425728A667570087ADF6 /* AppDelegate.swift */; };
 		7EBD425A28A667570087ADF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBD425928A667570087ADF6 /* SceneDelegate.swift */; };
 		7EBD425C28A667570087ADF6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBD425B28A667570087ADF6 /* LoginViewController.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E07002D28AD5B960094D992 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		7E40840428ABD4F9000F5E6F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7E6657F128AC2758002C266A /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		7EBD425428A667570087ADF6 /* HomeWorkFour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWorkFour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EBD425728A667570087ADF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EBD425928A667570087ADF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,16 +64,51 @@
 		7EBD425628A667570087ADF6 /* HomeWorkFour */ = {
 			isa = PBXGroup;
 			children = (
-				7EBD425728A667570087ADF6 /* AppDelegate.swift */,
-				7EBD425928A667570087ADF6 /* SceneDelegate.swift */,
-				7EBD425B28A667570087ADF6 /* LoginViewController.swift */,
-				7EBD426B28A670B50087ADF6 /* GreetingViewController.swift */,
-				7EBD425D28A667570087ADF6 /* Main.storyboard */,
+				7EBD426F28AB7CF30087ADF6 /* Storyboards */,
+				7EBD426D28AB7C810087ADF6 /* ViewControllers */,
+				7EBD426E28AB7CCD0087ADF6 /* Models */,
+				7EBD427028AB7D240087ADF6 /* SupportFiles */,
 				7EBD426028A667590087ADF6 /* Assets.xcassets */,
-				7EBD426228A667590087ADF6 /* LaunchScreen.storyboard */,
 				7EBD426528A667590087ADF6 /* Info.plist */,
 			);
 			path = HomeWorkFour;
+			sourceTree = "<group>";
+		};
+		7EBD426D28AB7C810087ADF6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7EBD425B28A667570087ADF6 /* LoginViewController.swift */,
+				7EBD426B28A670B50087ADF6 /* GreetingViewController.swift */,
+				7E6657F128AC2758002C266A /* UserViewController.swift */,
+				7E07002D28AD5B960094D992 /* InfoViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7EBD426E28AB7CCD0087ADF6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7E40840428ABD4F9000F5E6F /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7EBD426F28AB7CF30087ADF6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7EBD425D28A667570087ADF6 /* Main.storyboard */,
+				7EBD426228A667590087ADF6 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7EBD427028AB7D240087ADF6 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				7EBD425728A667570087ADF6 /* AppDelegate.swift */,
+				7EBD425928A667570087ADF6 /* SceneDelegate.swift */,
+			);
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +182,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E6657F228AC2758002C266A /* UserViewController.swift in Sources */,
 				7EBD425C28A667570087ADF6 /* LoginViewController.swift in Sources */,
 				7EBD425828A667570087ADF6 /* AppDelegate.swift in Sources */,
 				7EBD425A28A667570087ADF6 /* SceneDelegate.swift in Sources */,
+				7E40840528ABD4F9000F5E6F /* User.swift in Sources */,
+				7E07002E28AD5B960094D992 /* InfoViewController.swift in Sources */,
 				7EBD426C28A670B50087ADF6 /* GreetingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,8 +333,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66SPJZCUBP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HomeWorkFour/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -305,6 +351,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = QWhmn.HomeWorkFour;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -316,8 +363,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66SPJZCUBP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HomeWorkFour/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -332,6 +381,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = QWhmn.HomeWorkFour;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
