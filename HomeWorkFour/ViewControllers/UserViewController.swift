@@ -9,26 +9,48 @@ import UIKit
 
 class UserViewController: UIViewController {
 
-
-    @IBOutlet var labelAge: UILabel!
-    @IBOutlet var labelNumber: UILabel!
-    @IBOutlet var labelEmail: UILabel!
-    @IBOutlet var labelInfo: UILabel!
+    // MARK: - properties
     
-    private let person = Person.getPerson()
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var professionLabel: UILabel!
+    @IBOutlet var numberLabel: UILabel!
+    @IBOutlet var ageLabel: UILabel!
+    @IBOutlet var emailLabel: UILabel!
+    
+    @IBOutlet var photoImage: UIImageView!
+    
+    var userOne: User!
+    
+    // MARK: - viewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        labelAge.text = "Возраст: \(person.age) лет"
-        labelNumber.text = "Номер телефона: \(person.number)"
-        labelEmail.text = "E-mail: \(person.email)"
-        labelInfo.text = "Немного обо мне: \(person.aboutMe)"
+        nameLabel.text = userOne.person.fullName
+        
+        professionLabel.text = userOne.person.profession
+        numberLabel.text = userOne.person.number
+        emailLabel.text = userOne.person.email
+        ageLabel.text = userOne.person.age
+        
+        nameLabel.layer.masksToBounds = true
+        numberLabel.layer.masksToBounds = true
+        emailLabel.layer.masksToBounds = true
+        ageLabel.layer.masksToBounds = true
+        
+        photoImage.image = UIImage(named: userOne.photo.photoOne)
         
         gradient()
       
     }
+    // MARK: - function
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let infoVC = segue.destination as? InfoViewController else { return }
+        infoVC.userOne = userOne
+    }
+
+        
     private func gradient() {
 
         let colorOne = UIColor(red: 24 / 255,

@@ -8,6 +8,8 @@
 import UIKit
 
 final class LoginViewController: UIViewController {
+
+    // MARK: - properties
     
     @IBOutlet var loginTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
@@ -16,19 +18,21 @@ final class LoginViewController: UIViewController {
     
     private let userOne = User.getUser()
     
-   
+    // MARK: - viewDidLoad
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         gradientView()
     }
-   
+    
+    // MARK: - IBAction function
     
     @IBAction func loginInButton(_ sender: UIButton) {
         guard loginTF.text == userOne.user, passwordTF.text == userOne.password else {
             showAlert(with: "Invalid login or password", and: "Please, enter correct login or password")
-        return
+            return
         }
     }
     
@@ -37,15 +41,14 @@ final class LoginViewController: UIViewController {
     }
     @IBAction func foggotPasswordButton() {
         showAlert(with: "Oops!", and: "Your password is \(userOne.password)")
-        
-       
     }
-    
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         loginTF.text = ""
         passwordTF.text = ""
     }
+    
+    // MARK: - override func
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -59,12 +62,18 @@ final class LoginViewController: UIViewController {
         for viewController in viewControllers {
             if let greetingVC = viewController as? GreetingViewController {
                 greetingVC.userName = userOne.user
-            } else if let userVC = viewController as? UserViewController {
+            } else if let navigationVC = viewController as? UINavigationController {
+                guard let userVC = navigationVC.topViewController as? UserViewController
+                else { return }
+                userVC.userOne = userOne
                 userVC.title = userOne.user
+                
             }
+        }
     }
-    }
-        
+    
+    // MARK: - gradient
+    
     private func gradientView() {
         let colorOne = UIColor(red: 10 / 255,
                                green: 127 / 255,
@@ -83,8 +92,11 @@ final class LoginViewController: UIViewController {
         self.view.layer.insertSublayer(gradient, at: 0)
     }
 }
+
+    // MARK: - extansion
+
 extension LoginViewController {
-private func showAlert(with title: String, and massage: String) {
+    private func showAlert(with title: String, and massage: String) {
         let alert = UIAlertController(title: title, message: massage, preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
@@ -94,5 +106,4 @@ private func showAlert(with title: String, and massage: String) {
         alert.addAction(okAction)
         present(alert, animated: true)
     }
-    
 }

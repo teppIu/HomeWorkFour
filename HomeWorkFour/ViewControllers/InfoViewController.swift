@@ -9,11 +9,45 @@ import UIKit
 
 class InfoViewController: UIViewController {
 
+    // MARK: - properties
+    
+    @IBOutlet var dogLabel: UILabel!
+    @IBOutlet var vocalLabel: UILabel!
+    @IBOutlet var drumsLabel: UILabel!
+    @IBOutlet var horseLabel: UILabel!
+    
+    @IBOutlet var dodImageOne: UIImageView!
+    @IBOutlet var dogImageTwo: UIImageView!
+    @IBOutlet var vocalImage: UIImageView!
+    @IBOutlet var drumsImage: UIImageView!
+    @IBOutlet var horseImageOne: UIImageView!
+    @IBOutlet var horseImageTwo: UIImageView!
+    
+    var userOne: User!
+    
+    // MARK: - viewDidLoad
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dogLabel.text = userOne.person.factFour
+        vocalLabel.text = userOne.person.factTwo
+        drumsLabel.text = userOne.person.factOne
+        horseLabel.text = userOne.person.factThree
+        
+        dodImageOne.image = UIImage(named: userOne.photo.photoTwo)
+        dogImageTwo.image = UIImage(named: userOne.photo.photoThree)
+        vocalImage.image = UIImage(named: userOne.photo.photoFive)
+        drumsImage.image = UIImage(named: userOne.photo.photoSix)
+        horseImageOne.image = UIImage(named: userOne.photo.photoFour)
+        horseImageTwo.image = UIImage(named: userOne.photo.photoSeven)
+        
+    
         gradient()
-
     }
+    
+    // MARK: - gradient
+    
     private func gradient() {
 
         let colorOne = UIColor(red: 24 / 255,

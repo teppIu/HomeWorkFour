@@ -9,11 +9,14 @@ import UIKit
 
 final class GreetingViewController: UIViewController {
     
-    @IBOutlet var greetingLabel: UILabel!
+    // MARK: - properties
     
+    @IBOutlet var greetingLabel: UILabel!
     @IBOutlet var logoutButton: UIButton!
     
     var userName = ""
+    
+    // MARK: - viewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +27,8 @@ final class GreetingViewController: UIViewController {
         gradient()
        
     }
+    
+    // MARK: - function
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let navigationVC = segue.destination as? UINavigationController else { return }
